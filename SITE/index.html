@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOSSO AMOR EM CADA DETALHE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="hero-section">
+        <div class="hero-accent"></div>
+        <div class="content">
+            <h1 class="main-title font-serif">Nosso Amor em</h1>
+            <h1 class="sub-title font-serif color-accent">Cada Detalhe</h1>
+            <p class="description">
+                Um espaço especial para celebrar cada momento, cada risada e cada razão pela qual nossos corações batem juntos.
+            </p>
+            <div class="signature color-accent font-script">Te amo infinitamente</div>
+            <br>
+            <a href="#por-que" class="scroll-btn">NOSSAS RAZÕES</a>
+        </div>
+    </section>
+
+    <section id="por-que" class="reasons-section">
+        <div class="reasons-header">
+            <h2 class="reasons-title font-serif">Por Que Nos Amamos</h2>
+            <p class="reasons-subtitle">Cada razão é um batimento do nosso coração</p>
+        </div>
+        
+        <div class="cards-grid">
+            <div class="reason-card">
+                <div class="icon-placeholder">&#9786;</div> <h3 class="card-title">Seu Sorriso</h3>
+                <p class="card-text">Seu sorriso ilumina meus dias e faz tudo valer a pena.</p>
+            </div>
+            
+            <div class="reason-card">
+                <div class="icon-placeholder">&#9786;</div>
+                <h3 class="card-title">Sua Risada</h3>
+                <p class="card-text">Seu jeito de rir contagiante que alegra qualquer momento.</p>
+            </div>
+
+            <div class="reason-card">
+                <div class="icon-placeholder">&#9825;</div> <h3 class="card-title">Seu Carinho</h3>
+                <p class="card-text">A forma como você cuida de mim me faz sentir especial.</p>
+            </div>
+
+            <div class="reason-card">
+                <div class="icon-placeholder">&#9787;</div> <h3 class="card-title">Nossa Cumplicidade</h3>
+                <p class="card-text">Nós nos entendemos sem precisar falar.</p>
+            </div>
+
+            <div class="reason-card">
+                <div class="icon-placeholder">&#128065;</div> <h3 class="card-title">Seus Olhos</h3>
+                <p class="card-text">Eu me perco no seu olhar e encontro meu lar.</p>
+            </div>
+
+            <div class="reason-card">
+                <div class="icon-placeholder">&#9734;</div> <h3 class="card-title">Seu Jeito Único</h3>
+                <p class="card-text">Tudo em você é perfeito do seu jeito único de ser.</p>
+            </div>
+        </div>
+
+        <div class="reasons-footer">
+            <div class="final-signature color-accent font-script">E mil outras razões que descobrimos a cada dia...</div>
+        </div>
+        <br><br>
+        <a href="#quiz" class="scroll-btn">NOSSO QUIZ</a>
+    </section>
+
+    <section id="quiz" class="quiz-section">
+        <div class="reasons-header">
+            <h2 class="reasons-title font-serif">O Quiz do Amor</h2>
+            <p class="reasons-subtitle">Será que você conhece bem nossa história?</p>
+        </div>
+
+        <div class="quiz-container">
+            <div class="quiz-card" data-question="1">
+                <h3 class="quiz-question">1. Qual nosso momento favorito?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option correct-option" onclick="selectOption(this, 1)">Nossa primeira viagem juntos</div>
+                    <div class="quiz-option" onclick="selectOption(this, 1)">Nosso primeiro beijo</div>
+                    <div class="quiz-option" onclick="selectOption(this, 1)">Todas opções</div>
+                </div>
+            </div>
+
+            <div class="quiz-card" data-question="2">
+                <h3 class="quiz-question">2. Qual a data do nosso primeiro beijo?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="selectOption(this, 2)">15 de Outubro</div>
+                    <div class="quiz-option correct-option" onclick="selectOption(this, 2)">18 de Outubro</div> <div class="quiz-option" onclick="selectOption(this, 2)">18 de Novembro</div>
+                </div>
+            </div>
+
+            <div class="quiz-card" data-question="3">
+                <h3 class="quiz-question">3. Quem tomou a primeira iniciativa?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="selectOption(this, 3)">Eu, claro!</div> <div class="quiz-option correct-option" onclick="selectOption(this, 3)">Foi você, sem dúvida.</div>
+                    <div class="quiz-option" onclick="selectOption(this, 3)">Foi mútuo, aconteceu.</div>
+                </div>
+            </div>
+
+            <button class="quiz-submit-btn scroll-btn" onclick="checkQuiz()">VERIFICAR RESULTADOS</button>
+        </div>
+
+        <div id="quiz-results" class="quiz-results">
+            <p class="quiz-score">Você acertou <span id="score-value">0</span> de 3!</p>
+            <p id="quiz-message" class="quiz-message font-script">Nossa história é a melhor!</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

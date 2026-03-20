@@ -1,0 +1,293 @@
+html { scroll-behavior: smooth; }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdfaf6; /* Bege claro (off-white) */
+        }
+
+        /* --- ESTILOS COMUNS --- */
+        .color-accent { color: #e5a48d; } /* Coral suave (rose gold) */
+        .font-serif { font-family: 'Bodoni Moda', serif; }
+        .font-script { font-family: 'Great Vibes', cursive; }
+
+        /* --- SEÇÃO 1: HERO (PÁGINA DE ENTRADA, BASEADA NA PRIMEIRA IMAGEM) --- */
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            text-align: center;
+            /* Padrão de fundo sutil (simulado) */
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" opacity="0.05"><path d="M0,0 C200,100 400,0 600,100" stroke="%23f7c9b0" stroke-width="1" fill="none"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-accent {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 100%;
+            background-color: rgba(229, 164, 141, 0.3); /* Coral transparente */
+        }
+
+        .main-title {
+            font-size: clamp(2.5rem, 8vw, 3.8rem);
+            color: #3a3a3a;
+            margin-bottom: 0;
+            font-weight: 400;
+        }
+
+        .sub-title {
+            font-size: clamp(2.5rem, 8vw, 3.8rem);
+            margin-top: -10px;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .description {
+            font-weight: 300;
+            color: #666;
+            max-width: 650px;
+            margin: 0 auto 35px;
+            padding: 0 20px;
+            line-height: 1.6;
+        }
+
+        .signature {
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            opacity: 0.9;
+        }
+
+        /* Botão de navegação */
+        .scroll-btn {
+            text-decoration: none;
+            color: #e5a48d;
+            border: 1px solid #e5a48d;
+            padding: 12px 30px;
+            border-radius: 30px;
+            transition: 0.3s;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .scroll-btn:hover {
+            background-color: #e5a48d;
+            color: white;
+        }
+
+        /* --- SEÇÃO 2: RAZÕES DO AMOR (BASEADA NA SEGUNDA IMAGEM) --- */
+        .reasons-section {
+            min-height: 100vh;
+            padding: 100px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .reasons-header {
+            margin-bottom: 60px;
+            max-width: 700px;
+        }
+
+        .reasons-title {
+            font-size: clamp(2rem, 6vw, 2.8rem);
+            color: #3a3a3a;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .reasons-subtitle {
+            font-weight: 300;
+            color: #777;
+            font-size: 1.1rem;
+        }
+
+        /* Grid de Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+            gap: 25px;
+            width: 100%;
+            max-width: 1100px;
+            margin-bottom: 60px;
+        }
+
+        /* Estilo do Card individual */
+        .reason-card {
+            background: white;
+            padding: 40px 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03); /* Sombra muito suave */
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .reason-card:hover {
+            transform: translateY(-5px); /* Efeito ao passar o mouse */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+        }
+
+        /* Ícones dos cards */
+        .card-icon {
+            font-size: 2.2rem;
+            color: #e5a48d; /* Coral */
+            margin-bottom: 20px;
+            opacity: 0.7;
+        }
+
+        /* Texto simples para simular ícones outline (como na imagem) */
+        .icon-placeholder {
+            font-size: 1.5rem;
+            color: #e5a48d;
+            margin-bottom: 20px;
+            font-weight: 200;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            color: #444;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .card-text {
+            font-weight: 300;
+            color: #777;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Texto final Cursivo */
+        .reasons-footer {
+            max-width: 700px;
+            margin-top: 20px;
+        }
+
+        .final-signature {
+            font-size: 1.8rem;
+            opacity: 0.8;
+            padding: 0 20px;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 900px) {
+            .cards-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 colunas no tablet */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .cards-grid {
+                grid-template-columns: 1fr; /* 1 coluna no celular */
+            }
+            .main-title, .sub-title { font-size: 2.5rem; }
+        }
+
+        .quiz-section {
+            min-height: 100vh;
+            padding: 100px 20px;
+            background-color: white; /* Diferente do off-white da galeria para destacar */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .quiz-container {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .quiz-card {
+            background-color: #fdfaf6;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            text-align: left;
+        }
+
+        .quiz-question {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 1.6rem;
+            color: #3a3a3a;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .quiz-option {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            padding: 15px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            font-size: 1rem;
+            color: #555;
+            font-weight: 300;
+        }
+
+        .quiz-option:hover {
+            border-color: #e5a48d;
+            background-color: #fff9f6;
+        }
+
+        .quiz-option.selected {
+            background-color: #e5a48d;
+            color: white;
+            border-color: #e5a48d;
+        }
+
+        .quiz-option.correct {
+            background-color: #a7d0a7 !important; /* Verde suave */
+            color: white !important;
+            border-color: #a7d0a7 !important;
+        }
+
+        .quiz-option.incorrect {
+            background-color: #e5a9a9 !important; /* Vermelho suave */
+            color: white !important;
+            border-color: #e5a9a9 !important;
+        }
+
+        .quiz-submit-btn {
+            margin-top: 20px;
+            display: none; /* Só aparece no final */
+        }
+
+        .quiz-results {
+            margin-top: 50px;
+            display: none; /* Só aparece no final */
+            text-align: center;
+        }
+
+        .quiz-score {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 2.2rem;
+            color: #3a3a3a;
+            margin-bottom: 15px;
+        }
+
+        .quiz-message {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.8rem;
+            color: #e5a48d;
+        }
